@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delightful Ice Cream</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">🍦 Delightful Ice Cream</div>
+            <div class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#flavors">Flavors</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="mobile-menu" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Discover Pure Joy in Every Scoop</h1>
+                <p>Handcrafted ice cream made with premium ingredients and love</p>
+                <a href="#flavors" class="cta-button">Explore Flavors</a>
+            </div>
+        </section>
+
+        <section id="flavors" class="flavors">
+            <h2>Our Flavors</h2>
+            <div class="flavor-grid">
+                <div class="flavor-card">
+                    <div class="flavor-image">
+                        <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&w=400" alt="Vanilla Bean" loading="lazy">
+                    </div>
+                    <h3>Vanilla Bean</h3>
+                    <p>Rich and creamy Madagascar vanilla beans blended to perfection</p>
+                    <button class="order-button" data-flavor="Vanilla Bean">Order Now</button>
+                </div>
+
+                <div class="flavor-card">
+                    <div class="flavor-image">
+                        <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&w=400" alt="Chocolate Fudge" loading="lazy">
+                    </div>
+                    <h3>Chocolate Fudge</h3>
+                    <p>Decadent chocolate with ribbons of fudge throughout</p>
+                    <button class="order-button" data-flavor="Chocolate Fudge">Order Now</button>
+                </div>
+
+                <div class="flavor-card">
+                    <div class="flavor-image">
+                        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&w=400" alt="Strawberry Fields" loading="lazy">
+                    </div>
+                    <h3>Strawberry Fields</h3>
+                    <p>Fresh strawberries blended into creamy perfection</p>
+                    <button class="order-button" data-flavor="Strawberry Fields">Order Now</button>
+                </div>
+
+                <div class="flavor-card">
+                    <div class="flavor-image">
+                        <img src="https://images.unsplash.com/photo-1501443762994-82bd5dace89a?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&w=400" alt="Mint Chocolate Chip" loading="lazy">
+                    </div>
+                    <h3>Mint Chocolate Chip</h3>
+                    <p>Cool mint ice cream with dark chocolate chips</p>
+                    <button class="order-button" data-flavor="Mint Chocolate Chip">Order Now</button>
+                </div>
+            </div>
+        </section>
+
+        <div id="orderModal" class="modal" aria-hidden="true">
+            <div class="modal-content">
+                <button class="close-modal" aria-label="Close modal">&times;</button>
+                <h2>Place Your Order</h2>
+                <form id="orderForm">
+                    <div class="form-group">
+                        <label for="flavorInput">Selected Flavor</label>
+                        <input type="text" id="flavorInput" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantityInput">Quantity (Scoops)</label>
+                        <input type="number" id="quantityInput" min="1" max="10" required>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="nameInput">Your Name</label>
+                        <input type="text" id="nameInput" required>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailInput">Email</label>
+                        <input type="email" id="emailInput" required>
+                        <span class="error-message"></span>
+                    </div>
+                    <button type="submit" class="submit-button">Place Order</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer id="contact" class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>📞 (555) 123-4567</p>
+                <p>📧 info@delightfulicecream.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Hours</h3>
+                <p>Mon-Fri: 11am - 10pm</p>
+                <p>Sat-Sun: 12pm - 11pm</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">📱</a>
+                    <a href="#" aria-label="Instagram">📸</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Delightful Ice Cream. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
